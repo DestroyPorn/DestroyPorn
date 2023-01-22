@@ -10,5 +10,12 @@
         "16": "./cdn/logo_16.png",
         "48": "./cdn/logo_48.png",
         "128": "./cdn/logo_128.png" 
-    }
+    },
+    "background": {
+        "service_worker": "service_worker.js",
+        "type": "module"
+    },
+    "permissions": [
+        "tabs"
+    ]
 }
