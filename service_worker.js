@@ -1,3 +1,5 @@
+import { checkUrl } from './blocked-sites/checkUrl.js'
+
 function setCheckingUrl(){
     console.info("DestroyPorn | Interval set - success.")
 
