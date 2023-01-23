@@ -26,7 +26,7 @@ If you have experience with JavaScript, especially Node.js, please contribute an
 - Report system.
 
 ## Credits 🦺
-- @thejimi - Main Developer / Owner of DestroyPorn
-- @Iceayydev - Art designer.
+- [@thejimi](https://github.com/thejimi) - Main Developer / Owner of DestroyPorn
+- [@Iceayydev](https://github.com/Iceayydev) - Art designer.
 - [bryput/porn-site-list](https://github.com/bryput/porn-site-list/blob/master/sites.json)
 - [tensorflow/tfjs-node](https://github.com/tensorflow/tfjs)
