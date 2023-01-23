@@ -12,4 +12,8 @@ chrome.windows.onCreated.addListener(function() {
     setCheckingUrl()
 })
 
-setCheckingUrl()
+chrome.runtime.onInstalled.addListener(function(details){
+    if(details.reason == "install"){
+        chrome.tabs.create({url : "https://destroyporn.eu/cdn/ext/installed.html?ref=extension_chromium"});    
+    }
+});
