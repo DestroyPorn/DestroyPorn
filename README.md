@@ -24,3 +24,9 @@ If you have experience with JavaScript, especially Node.js, please contribute an
 - Support for other browsers like Firefox.
 - Add our [NSFW-Detector](https://github.com/DestroyPorn/NSFW-Detector) functionality.
 - Report system.
+
+## Credits 🦺
+- @thejimi - Main Developer / Owner of DestroyPorn
+- @Iceayydev - Art designer.
+- [bryput/porn-site-list](https://github.com/bryput/porn-site-list/blob/master/sites.json)
+- [tensorflow/tfjs-node](https://github.com/tensorflow/tfjs)

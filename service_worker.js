@@ -1,8 +1,5 @@
 import { checkUrl } from './blocked-sites/checkUrl.js';
 
-    setInterval(() => {
-        checkUrl()
-    }, 500);
-
-
-   
+setInterval(() => {
+    checkUrl()
+}, 500);
