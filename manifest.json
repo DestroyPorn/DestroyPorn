@@ -17,6 +17,12 @@
     },
     "permissions": [
         "tabs",
-        "activeTab"
+        "activeTab",
+        "scripting",
+        "notifications"
+    ],
+    "host_permissions": [
+        "http://*/",
+        "https://*/"
     ]
 }
