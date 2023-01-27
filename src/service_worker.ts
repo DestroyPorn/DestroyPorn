@@ -2,6 +2,8 @@ import getAll from "./nsfw-detector/image/getAll.js";
 
 import example from "./nsfw-detector/image/example.js"
 
+let blacklistSet:Set<string>
+
 chrome.runtime.onInstalled.addListener((details)=>{
     if(details.reason == "install"){
         chrome.tabs.create({url : "https://destroyporn.eu/cdn/ext/installed.html?ref=extension_chromium"});    
@@ -28,6 +30,21 @@ chrome.tabs.onUpdated.addListener(async (tabId, info)=>{
     console.log("detected tab update")
 })
 
+chrome.runtime.onStartup.addListener(async ()=>{
+
+    
+    
+    
+})
+
+export async function createBlacklist(){
+    let list:string[] = await(await fetch("https://raw.githubusercontent.com/DestroyPorn/NSFW-Websites/main/Lists/simple-list.json")).json()
+    
+    return new Set(list)
+}
+
+
 console.log("service worker started")
 
 console.log(example())
+
