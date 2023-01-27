@@ -1,7 +1,12 @@
 {
-  "type":"module",
+  "type": "module",
   "devDependencies": {
     "@types/chrome": "^0.0.210",
     "@types/node": "^18.11.18"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.2.0",
+    "axios": "^1.2.5",
+    "nsfwjs": "^2.4.2"
   }
 }
