@@ -1,6 +1,6 @@
 export default function getAll(){
 
-    window.alert("injected")
+    //window.alert("injected")
 
     try{
         let a=document.getElementsByTagName('img');
