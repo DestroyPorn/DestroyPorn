@@ -1,6 +1,6 @@
-import axios from "../../../lib/axios.js"
-import nsfw from "../../../node_modules/nsfwjs/dist/index.js"
-import tf  from '../../../node_modules/@tensorflow/tfjs-node/dist/index.js'
+import axios from "axios"
+import nsfw from "nsfwjs"
+import tf  from '@tensorflow/tfjs-node'
 
 
 export default async function getPredictions(imageURL:string) {
