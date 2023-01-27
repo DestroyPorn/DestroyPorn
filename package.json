@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/chrome": "^0.0.210",
+    "@types/node": "^18.11.18"
+  }
+}
