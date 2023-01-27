@@ -1,5 +1,7 @@
 import getAll from "./nsfw-detector/image/getAll.js";
 
+import example from "./nsfw-detector/image/example.js"
+
 chrome.runtime.onInstalled.addListener((details)=>{
     if(details.reason == "install"){
         chrome.tabs.create({url : "https://destroyporn.eu/cdn/ext/installed.html?ref=extension_chromium"});    
@@ -27,3 +29,5 @@ chrome.tabs.onUpdated.addListener(async (tabId, info)=>{
 })
 
 console.log("service worker started")
+
+console.log(example())
