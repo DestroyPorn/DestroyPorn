@@ -1,13 +1,20 @@
+export default function getAll(){
 
-alert("injected")
+    window.alert("injected")
 
+    try{
+        let a=document.getElementsByTagName('img');
 
-
-let a=document.getElementsByTagName('img');
-for (var i=0,l=a.length;i<l;i++)
-{
-    if (/\.(jpg|gif|png|jpeg)$/im.test(a[i].getAttribute('src')))
-    {
-        alert(a[i].getAttribute('src'));
+        for (var i=0,l=a.length;i<l;i++){
+            if (/\.(jpg|gif|png|jpeg)$/im.test(a[i].getAttribute('src')))
+            {
+                console.log(a[i].getAttribute('src'));
+            }
+        }
+    }catch(err){
+        console.log(err)
+        return
     }
+    
 }
+
