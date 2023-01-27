@@ -1,12 +1,21 @@
 {
+  "name": "destroyporn",
+  "description": "<p align=\"center\">\r   <img src=\"https://avatars.githubusercontent.com/u/123158165?s=200&v=4\" />\r   <h1>DestroyPorn</h1>\r   <p>Chrome extension that removes unwanted adult content. Our mission is to help people break free from their porn addiction.</p>\r   <p style=\"color:#ff9902\">Alpha 1.0.2</p>\r </p>",
+  "version": "1.0.0",
+  "main": "index.js",
   "type": "module",
-  "devDependencies": {
-    "@types/chrome": "^0.0.210",
-    "@types/node": "^18.11.18"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@tensorflow/tfjs-node": "^4.2.0",
-    "axios": "^1.2.5",
-    "nsfwjs": "^2.4.2"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DestroyPorn/DestroyPorn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DestroyPorn/DestroyPorn/issues"
+  },
+  "homepage": "https://github.com/DestroyPorn/DestroyPorn#readme"
 }
