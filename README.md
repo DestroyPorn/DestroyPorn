@@ -1,5 +1,5 @@
 <p align="center">
-  <img src='https://destroyporn.eu/cdn/img/banner2.png' / height="50px">
+  <img src='https://destroyporn.eu/cdn/img/banner2.png' / height="90px">
   <h1>DestroyPorn</h1>
   <p>Chrome extension that removes unwanted adult content. Our mission is to help people break free from their porn addiction.</p>
   <p style="color:#ff9902">Alpha 1.0.2</p>
