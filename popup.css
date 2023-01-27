@@ -1,0 +1,36 @@
+/* evo was here */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;900&display=swap');
+
+body {
+	background-color: black;
+	font-family: 'Inter', sans-serif;
+	color: white;
+	background-image: url('bg.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+		text-align: center;
+}
+
+img {
+	display: block;
+	margin: auto;
+	transform: translateY(20px);
+	width: 209px;
+	height: 44px;
+}
+
+b {
+	font-size: 35px;
+	font-weight: 900;
+
+}
+
+p {
+		text-align: center;
+}
+
+i {
+	opacity: 30%;
+	text-align: left!important;
+}
