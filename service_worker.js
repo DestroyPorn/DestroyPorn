@@ -1,5 +1,5 @@
-import { checkUrl } from './blocked-sites/checkUrl.js'
-import { getCurrentTab } from './src/getCurrentTab.js';
+import checkUrl from './blocked-sites/checkUrl.js'
+import getCurrentTab from './src/getCurrentTab.js';
 
 function setCheckingUrl(){
     console.info("DestroyPorn | Interval set - success.")

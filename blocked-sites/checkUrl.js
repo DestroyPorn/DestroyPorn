@@ -1,4 +1,4 @@
-export function checkUrl() {
+export default function checkUrl() {
     chrome.tabs.query({
         active: true,
         lastFocusedWindow: true
