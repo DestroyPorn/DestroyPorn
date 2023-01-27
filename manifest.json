@@ -12,7 +12,7 @@
         "128": "./cdn/logo_128.png" 
     },
     "background": {
-        "service_worker": "service_worker.js",
+        "service_worker": "build/service_worker.js",
         "type": "module"
     },
     "permissions": [
