@@ -1,5 +1,5 @@
-import checkUrl from './blocked-sites/checkUrl.js'
-import getCurrentTab from './src/getCurrentTab.js';
+
+
 
 
 /*
@@ -10,11 +10,18 @@ chrome.runtime.onInstalled.addListener((details)=>{
 });
 */
 
+async function getCurrentTabId():Promise<number| undefined> {
+    let queryOptions = { active: true, lastFocusedWindow: true };
+
+    let [tab] = await chrome.tabs.query(queryOptions);
+    return tab.id;
+}
+
 
 chrome.tabs.onCreated.addListener(async (el)=>{
     chrome.scripting.
     executeScript({
-        target : await getCurrentTab(),
+        target : {tabId: 1},
         files : [ "./nsfw-detector/image/getAll.js" ],
     })
     console.log("detected tab creation")
