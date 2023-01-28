@@ -31,7 +31,7 @@ export default {
     }
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'service_worker.js',
     path: path.resolve(__dirname, 'dist'),
   },
   stats:{
