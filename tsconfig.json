@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
       "target":"ESNext",
-      "watch": true,
+      "watch": false,
       "module": "ESNext",
       "lib":["DOM","ESNext"],
       "declaration": false,
       "outDir": "./build",
       "esModuleInterop": true,
       "skipLibCheck": true,
-      "moduleResolution": "nodenext",
-      "sourceMap": false
+      "moduleResolution": "node",
+      "sourceMap": true
   },
   "include": ["*.ts","**/*.ts"],
   "exclude":["node_modules","./build/*","*.test.ts","*.config.ts"]
