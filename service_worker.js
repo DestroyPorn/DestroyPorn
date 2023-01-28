@@ -1,17 +1,13 @@
 import checkUrl from './blocked-sites/checkUrl.js'
 import getCurrentTab from './src/getCurrentTab.js';
 
-function setCheckingUrl(){
-    console.info("DestroyPorn | Interval set - success.")
-
-    setInterval(() => {
+chrome.tabs.onUpdated.addListener(function
+    (tabId, changeInfo, tab) {
+      if (changeInfo.url) {
         checkUrl()
-    }, 500);
-}
-
-chrome.windows.onCreated.addListener(function() {
-    setCheckingUrl()
-})
+      }
+    }
+);
 
 chrome.runtime.onInstalled.addListener(function(details){
     if(details.reason == "install"){
