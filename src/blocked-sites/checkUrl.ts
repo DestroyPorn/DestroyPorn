@@ -8,8 +8,9 @@ export function checkUrl(url:string | URL) {
 }
 
 export async function replacecurrentTab(blockedSite:string){
-    await getCurrentTabId()
-    chrome.tabs.update({
-        url:`https://destroyporn.eu/cdn/ext/blocked-website.html?ref=extension_chromium&website=${blockedSite}`
+    chrome.tabs.get(await getCurrentTabId(),(tab)=>{
+        chrome.tabs.update({
+            url:`https://destroyporn.eu/cdn/ext/blocked-website.html?ref=extension_chromium&website=${blockedSite}`
+        })
     })
 }
