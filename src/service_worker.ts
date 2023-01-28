@@ -1,6 +1,6 @@
-import getAll from "./nsfw-detector/image/getAll.js";
+import getAll from "./nsfw-detector/image/getAll";
 
-import example from "./nsfw-detector/image/example.js"
+import example from "./nsfw-detector/image/example"
 
 let blacklistSet:Set<string>
 
