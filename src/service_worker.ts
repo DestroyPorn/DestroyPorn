@@ -10,7 +10,7 @@ chrome.runtime.onInstalled.addListener((details)=>{
     }
 });
 
-async function getCurrentTabId():Promise<number| undefined> {
+export async function getCurrentTabId():Promise<number| undefined> {
     try{
         let queryOptions = { active: true, lastFocusedWindow: true };
         let [tab] = await chrome.tabs.query(queryOptions);
