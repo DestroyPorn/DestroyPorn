@@ -13,4 +13,4 @@ assignees: ''
 
 **Web Browser:**
 
-**Manifest version:**
+**Extension version:**
