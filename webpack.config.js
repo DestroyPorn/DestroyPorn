@@ -1,8 +1,8 @@
-
 import path from "node:path"
-import webpack from "webpack"
-
 import * as url from 'url';
+
+
+
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
@@ -21,11 +21,22 @@ export default {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    fallback: { 
+      "stream": "stream-browserify",
+      "buffer": "buffer/",
+      "util": "util/",
+      "zlib": "browserify-zlib",
+      "assert": "assert/",
+      "path": "path-browserify"
+    }
   },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  stats:{
+    errorDetails: false,
+  }
 }
 
 
