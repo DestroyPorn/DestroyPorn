@@ -1,4 +1,4 @@
-import classify from './classify.js'
+import classify from './classify'
 
 export default async function example(){
 
