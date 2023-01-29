@@ -1,13 +1,13 @@
 import path from "node:path"
 import * as url from 'url';
 
-
-
-const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 export default {
-  entry: './src/service_worker.ts',
+  entry:{
+    injectorScript: './src/injectorScript.ts',
+    service_worker: './src/service_worker.ts',
+  },
   devtool: 'inline-source-map',
   mode: "development",
   module: {
@@ -31,7 +31,6 @@ export default {
     }
   },
   output: {
-    filename: 'service_worker.js',
     path: path.resolve(__dirname, 'dist'),
   },
   stats:{
