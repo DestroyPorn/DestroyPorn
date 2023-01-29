@@ -1,12 +1,17 @@
-import classify from "./nsfw-detector/image/classify";
 
+import nsfw from "@bakedpotatolord/nsfwjs"
 
-export function injectorScript(){
+export async function injectorScript(){
   console.log("script ingected");
+  const model = await nsfw.load()
 
   Array.from(document.getElementsByTagName('img'))
   .forEach(async (im)=>{
-    alert(im)
-    console.log(await classify(im))
+    console.log(im)
+    let [predictions] = await model.classify(im)
+    console.log(predictions)
   })
+
 }
+
+injectorScript()

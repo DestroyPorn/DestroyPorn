@@ -1,4 +1,4 @@
-import injectorScript from "./injectorScript";
+import { injectorScript } from "./injectorScript";
 
 chrome.runtime.onInstalled.addListener((details)=>{
     if(details.reason == "install"){
@@ -20,7 +20,8 @@ chrome.tabs.onUpdated.addListener(async (tabId, info)=>{
     chrome.scripting.
     executeScript({
         target :{tabId: await getCurrentTabId()},
-        func: injectorScript
+        files: ["./dist/injectorscript.js"]
+        
     })
     
     console.log("detected tab update")
@@ -31,10 +32,14 @@ chrome.runtime.onStartup.addListener(async ()=>{
 })
 
 export async function createBlacklist(){
-    let list:string[] = await(await fetch("https://raw.githubusercontent.com/DestroyPorn/NSFW-Websites/main/Lists/simple-list.json")).json()
-    return new Set(list)
+    let list:{domains:string[]} = await(await fetch("https://raw.githubusercontent.com/DestroyPorn/NSFW-Websites/main/Lists/simple-list.json")).json()
+    return new Set(list.domains)
 }
 
-console.log("service worker started")
+console.log("service worker started");
+
+(async()=>{
+    console.log(await createBlacklist())
+})()
 
 
