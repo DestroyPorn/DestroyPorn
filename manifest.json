@@ -6,13 +6,13 @@
     "action": {
         "default_popup": "./src/popup.html"
     },
-    "icons": { 
+    "icons": {
         "16": "./cdn/logo_16.png",
         "48": "./cdn/logo_48.png",
         "128": "./cdn/logo_128.png" 
     },
     "background": {
-        "service_worker": "service_worker.js",
+        "service_worker": "dist/service_worker.js",
         "type": "module"
     },
     "permissions": [
@@ -24,5 +24,8 @@
     "host_permissions": [
         "http://*/",
         "https://*/"
-    ]
+    ],
+    "content_security_policy":{
+        "extension_page":"script-src 'self' 'unsafe-eval'; object-src 'self'"
+    }
 }
