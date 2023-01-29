@@ -1,7 +1,7 @@
 {
     "name": "DestroyPorn",
     "description": "Browser extension that removes unwanted adult content. Our mission is to help people break free from their porn addiction.",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "manifest_version": 3,
     "action": {
         "default_popup": "./src/popup.html"

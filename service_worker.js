@@ -14,3 +14,5 @@ chrome.runtime.onInstalled.addListener(function(details){
         chrome.tabs.create({url : "https://destroyporn.eu/cdn/ext/installed.html?ref=extension_chromium"});    
     }
 });
+
+chrome.runtime.setUninstallURL("https://destroyporn.eu/cdn/ext/uninstalled.html")
