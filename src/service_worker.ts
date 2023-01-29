@@ -1,4 +1,3 @@
-import { injectorScript } from "./injectorScript";
 
 chrome.runtime.onInstalled.addListener((details)=>{
     if(details.reason == "install"){
