@@ -1,6 +1,6 @@
 import type nsfw from "@bakedpotatolord/nsfwjs"
 
-interface prediction{
+export interface prediction{
     isNSFW: boolean
     winnerTag: nsfw.predictionType["className"]
     probability: number
