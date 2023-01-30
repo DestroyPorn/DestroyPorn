@@ -1,25 +1,24 @@
 import type nsfw from "@bakedpotatolord/nsfwjs"
 
-export default async function classify(predictions:nsfw.predictionType) {
+interface prediction{
+    isNSFW: boolean
+    winnerTag: nsfw.predictionType["className"]
+    probability: number
+}
 
+export default function classify(predictions:nsfw.predictionType):prediction {
 
     if(predictions.className === 'Neutral'){
         return {
-            ClassifiedAs:"Normal",
-            WinnerTag:predictions.className,
-            Probability:predictions.probability,
-            AllOptions:[
-                predictions
-            ]
+            isNSFW:false,
+            winnerTag:predictions.className,
+            probability:predictions.probability,
         }
     } else {
         return {
-            ClassifiedAs:"NSFW",
-            WinnerTag:predictions.className,
-            Probability:predictions.probability,
-            AllOptions:[
-                predictions
-            ]
+            isNSFW:true,
+            winnerTag:predictions.className,
+            probability:predictions.probability,
         }
     }
 }
