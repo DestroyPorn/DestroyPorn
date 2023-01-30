@@ -30,7 +30,7 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "@bakedpotatolord/nsfwjs": "^0.0.3",
+    "@bakedpotatolord/nsfwjs": "^0.0.4",
     "assert": "^2.0.0",
     "browserify-zlib": "^0.2.0",
     "buffer": "^6.0.3",
