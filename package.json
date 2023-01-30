@@ -1,0 +1,41 @@
+{
+  "name": "destroyporn",
+  "description": "<p align=\"center\">\r   <img src=\"https://avatars.githubusercontent.com/u/123158165?s=200&v=4\" />\r   <h1>DestroyPorn</h1>\r   <p>Chrome extension that removes unwanted adult content. Our mission is to help people break free from their porn addiction.</p>\r   <p style=\"color:#ff9902\">Alpha 1.0.2</p>\r </p>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DestroyPorn/DestroyPorn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DestroyPorn/DestroyPorn/issues"
+  },
+  "homepage": "https://github.com/DestroyPorn/DestroyPorn#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.0.210",
+    "@types/node": "^18.11.18",
+    "@types/webpack": "^5.28.0",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "@bakedpotatolord/nsfwjs": "^0.0.4",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "path-browserify": "^1.0.1",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.5"
+  }
+}
