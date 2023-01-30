@@ -1,3 +1,29 @@
+import nsfw from "@bakedpotatolord/nsfwjs"
+import type { message,imageMessage } from "./injectorScript";
+import type { prediction } from "./classify";
+
+let model:nsfw.NSFWJS;
+
+console.log(nsfw);
+
+(async()=>{
+    model = await nsfw.load()
+})()
+
+export interface identificationMessage extends message{
+    prediction:prediction
+}
+
+chrome.runtime.onMessage.addListener(async (message:imageMessage,sender,sendResponse)=>{
+    if(message.from == "injector"){
+
+        sendResponse(<identificationMessage>{
+
+            from:"worker",
+            prediction: await model.classify(message.image)[0]
+        })
+    }
+})
 
 chrome.runtime.onInstalled.addListener((details)=>{
     if(details.reason == "install"){
