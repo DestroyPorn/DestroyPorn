@@ -1,4 +1,6 @@
 
+import type { NSFWJS } from "@bakedpotatolord/nsfwjs";
+
 export interface message{
   from: "injector" | "worker"
 }
@@ -6,6 +8,8 @@ export interface message{
 export interface imageMessage extends message{
   image:HTMLImageElement
 }
+//@ts-ignore
+let model:NSFWJS = nsfwjs.load()
 
 export async function injectorScript(){
   console.log("script injected");
@@ -13,15 +17,7 @@ export async function injectorScript(){
   Array.from(document.getElementsByTagName('img'))
   .forEach(async (im)=>{
     console.log(im)
-    chrome.runtime.sendMessage(
-      <imageMessage>{
-        image:im,
-        from: "injector"
-      },
-      (res)=>{
-        console.log(res)
-      }
-      )
+    console.log(model.classify(im))
   })
 
 }

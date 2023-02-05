@@ -1,29 +1,13 @@
-import nsfw from "@bakedpotatolord/nsfwjs"
+
 import type { message,imageMessage } from "./injectorScript";
 import type { prediction } from "./classify";
 
-let model:nsfw.NSFWJS;
-
-console.log(nsfw);
-
-(async()=>{
-    model = await nsfw.load()
-})()
 
 export interface identificationMessage extends message{
     prediction:prediction
 }
 
-chrome.runtime.onMessage.addListener(async (message:imageMessage,sender,sendResponse)=>{
-    if(message.from == "injector"){
 
-        sendResponse(<identificationMessage>{
-
-            from:"worker",
-            prediction: await model.classify(message.image)[0]
-        })
-    }
-})
 
 chrome.runtime.onInstalled.addListener((details)=>{
     if(details.reason == "install"){
@@ -41,16 +25,23 @@ export async function getCurrentTabId():Promise<number| undefined> {
     }
 }
 
-chrome.tabs.onUpdated.addListener(async (tabId, info)=>{
+chrome.tabs.onUpdated.addListener(async (tabId)=>{
     chrome.scripting.
     executeScript({
-        target :{tabId: await getCurrentTabId()},
+        target :{tabId},
+        files: ['./lib/tensorflow.js',"./lib/nsfwjs.js"]
+        
+    })
+    chrome.scripting.
+    executeScript({
+        target :{tabId},
         files: ["./dist/injectorscript.js"]
         
     })
     
     console.log("detected tab update")
 })
+
 
 chrome.runtime.onStartup.addListener(async ()=>{
 
