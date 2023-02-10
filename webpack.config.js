@@ -5,8 +5,8 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 export default {
   entry:{
-    injectorScript: './src/injectorScript.ts',
-    service_worker: './src/service_worker.ts',
+    injectorScript: './src/injectorScript.js',
+    service_worker: './src/service_worker.js',
   },
   devtool: 'inline-source-map',
   mode: "development",

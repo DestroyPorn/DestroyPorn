@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener((details)=>{
     }
 });
 
-export async function getCurrentTabId():Promise<number| undefined> {
+export async function getCurrentTabId(){
     try{
         let queryOptions = { active: true, lastFocusedWindow: true };
         let [tab] = await chrome.tabs.query(queryOptions);
@@ -31,7 +31,7 @@ chrome.runtime.onStartup.addListener(async ()=>{
 })
 
 export async function createBlacklist(){
-    let list:{domains:string[]} = await(await fetch("https://raw.githubusercontent.com/DestroyPorn/NSFW-Websites/main/Lists/simple-list.json")).json()
+    let list = await(await fetch("https://raw.githubusercontent.com/DestroyPorn/NSFW-Websites/main/Lists/simple-list.json")).json()
     return new Set(list.domains)
 }
 

@@ -1,6 +1,6 @@
-import type nsfw from "@bakedpotatolord/nsfwjs"
 
-export default async function classify(predictions:nsfw.predictionType) {
+
+export default async function classify(predictions) {
 
 
     if(predictions.className === 'Neutral'){
