@@ -29,10 +29,6 @@ chrome.tabs.onUpdated.addListener(async (tabId, info)=>{
 chrome.tabs.onUpdated.addListener(function
     (tabId, changeInfo, tab) {
       if (changeInfo.url) {
-        if(changeInfo.url.includes('chrome://')){
-            return
-        }
-
         checkUrl()
       }
     }
