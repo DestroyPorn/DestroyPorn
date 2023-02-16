@@ -18,12 +18,7 @@
     "permissions": [
         "tabs",
         "activeTab",
-        "scripting",
-        "notifications"
-    ],
-    "host_permissions": [
-        "http://*/",
-        "https://*/"
+        "scripting"
     ],
     "content_security_policy":{
         "extension_page":"script-src 'self' 'unsafe-eval'; object-src 'self'"
