@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/DestroyPorn/DestroyPorn">
+  <a href="https://chrome.google.com/webstore/detail/destroyporn/lgoabbdkdjegjbagmeejkenednmkpcji">
     <img src="https://destroyporn.eu/cdn/img/logo3.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -15,7 +15,7 @@
     <br/>
     <a href="https://destroyporn.eu/discord?ref=readme">Discord Server</a>
     .
-    <a href="https://jimijs.pl/?ref=readmedestroyporn">Developer's Site</a>
+    <a href="https://chrome.google.com/webstore/detail/destroyporn/lgoabbdkdjegjbagmeejkenednmkpcji">Chrome Web Store</a>
     .
     <a href="https://github.com/DestroyPorn/DestroyPorn/issues">Request Feature</a>
   </p>
@@ -47,12 +47,7 @@ There are few ways DestroyPorn detects NSFW content. Here are the main ones:
 
 ### Installation
 
-- Make sure you're running Chrome or a Chromium based browser. (Like Opera or Brave)
-- Download the repository.
-- Go to the extensions settings in your browser.
-- Enable Developer Mode
-- Click "Load unpacked" and select the unpacked .zip file you downloaded.
-- Click reload and enjoy!
+- Install it from [Chrome Web Store](https://chrome.google.com/webstore/detail/destroyporn/lgoabbdkdjegjbagmeejkenednmkpcji)
 
 ## Contributing
 
